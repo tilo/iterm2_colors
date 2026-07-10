@@ -1,15 +1,14 @@
 # iterm2_colors
 
-Do you have multiple work directories to work on things in parallel? If you
-have many iTerm2 sessions open, it can be hard to keep track of where you are.
+Do you have multiple work directories for parallel work streams, and parallel AI sessions?
+Having many iTerm2 sessions open, can make it really hard to know in which directory you're working in.
 
-This small utility automatically colors your iTerm2 session based on the
-directory name.
+This light-weight utility automatically colors your iTerm2 session based on the directory name.
 
 The per-directory color coding for iTerm2, is tuned so text stays readable on light
-backgrounds (Molokai-inspired). Each terminal recolors itself based on the
-`Work_<color>` / `GitHub_<color>` directory you're in — `Work_red`, `Work_blue`,
-`Work_green`, `Work_yellow`, `Work_purple`, `Work_gray`, `Work_white`, `Work_black`.
+backgrounds (Molokai-inspired).
+
+Each terminal recolors itself based on the `Work_<color>` / `GitHub_<color>` directory you're in — `Work_red`, `Work_blue`, `Work_green`, `Work_yellow`, `Work_purple`, `Work_gray`, `Work_white`, `Work_black`.
 Similarly you could use `GitHub_` as the prefix.
 
 ## What it does
