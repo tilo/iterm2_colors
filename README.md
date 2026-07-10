@@ -1,13 +1,20 @@
-# terminal-colors
+# iterm2_colors
 
-Per-directory color coding for iTerm2, tuned so text stays readable on light
+Do you have multiple work directories to work on things in parallel? If you
+have many iTerm2 sessions open, it can be hard to keep track of where you are.
+
+This small utility automatically colors your iTerm2 session based on the
+directory name.
+
+The per-directory color coding for iTerm2, is tuned so text stays readable on light
 backgrounds (Molokai-inspired). Each terminal recolors itself based on the
 `Work_<color>` / `GitHub_<color>` directory you're in — `Work_red`, `Work_blue`,
 `Work_green`, `Work_yellow`, `Work_purple`, `Work_gray`, `Work_white`, `Work_black`.
+Similarly you could use `GitHub_` as the prefix.
 
 ## What it does
 
-- Recolors the **current** iTerm session with `SetColors` escape codes, so `CMD +/-`
+- Recolors the **current** iTerm2 session with `SetColors` escape codes, so `CMD +/-`
   zoom, font size, and split panes **survive a directory change**. (Switching iTerm
   profiles would reset those; this doesn't.)
 - Sets a neutral **gray badge** (watermark) that tints to match each background,
@@ -28,10 +35,10 @@ The installer:
 3. Applies the badge / Minimum Contrast / Smart Cursor settings to your iTerm
    **Default** profile.
 
-### Important: the profile step needs iTerm closed
+### Important: the profile step needs iTerm2 closed
 
-iTerm rewrites its preferences when it quits, so the profile settings can only be
-written while iTerm is **not running**. If iTerm is open when you run `install.sh`,
+iTerm2 rewrites its preferences when it quits, so the profile settings can only be
+written while iTerm2 is **not running**. If iTerm2 is open when you run `install.sh`,
 step 3 is skipped with instructions. To do it:
 
 ```sh
@@ -45,7 +52,7 @@ python3 ~/.iterm2_colors/apply-iterm-profile.py
 | File | Purpose |
 | ---- | ------- |
 | `colors.zsh`            | The palette + per-directory hook. Sourced from `~/.zshrc`. |
-| `apply-iterm-profile.py`| Writes badge / contrast / cursor to the iTerm Default profile (plist). No dependencies. Run with iTerm quit. |
+| `apply-iterm-profile.py`| Writes badge / contrast / cursor to the iTerm2 Default profile (plist). No dependencies. Run with iTerm2 quit. |
 | `install.sh`            | Wires everything up. |
 
 ## Customizing
@@ -54,7 +61,7 @@ python3 ~/.iterm2_colors/apply-iterm-profile.py
   Each is a set of `SetColors=key=hex` escape codes (`bg`, `fg`, the 16 ANSI slots,
   `tab`, and the base64 `SetBadgeFormat` label).
 - **Badge shade / opacity:** edit `GRAY` / `ALPHA` at the top of
-  `apply-iterm-profile.py`, then re-run it (with iTerm quit).
+  `apply-iterm-profile.py`, then re-run it (with iTerm2 quit).
 
 ## Claude Code (optional)
 
@@ -71,7 +78,7 @@ Theme is read at startup — restart `claude` to pick it up.
 
 ## Notes / gotchas
 
-- **iTerm keeps separate colors for light and dark mode.** The profile setting
+- **iTerm2 keeps separate colors for light and dark mode.** The profile setting
   "Use Separate Colors for Light and Dark Mode" means the plain color key is
   ignored in favor of `(Light)` / `(Dark)` variants — so the installer writes all
   three. If a profile setting ever seems ignored, this is why.
