@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# terminal-colors installer
+# iterm2_colors installer
 set -euo pipefail
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TARGET="$HOME/.iterm2_colors"
@@ -20,7 +20,7 @@ echo "2. Wiring into ~/.zshrc"
 if grep -qF '.iterm2_colors/colors.zsh' "$HOME/.zshrc" 2>/dev/null; then
   echo "   already sourced - skipping"
 else
-  printf '\n# terminal-colors\n%s\n' "$LINE" >> "$HOME/.zshrc"
+  printf '\n# iterm2_colors\n%s\n' "$LINE" >> "$HOME/.zshrc"
   echo "   added source line"
 fi
 

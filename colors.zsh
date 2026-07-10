@@ -1,12 +1,12 @@
-# terminal-colors — per-directory iTerm2 recolor (zoom-safe)
+# iterrm2_colors — per-directory iTerm2 recolor (zoom-safe)
 # Sourced from ~/.zshrc:  source ~/.iterm2_colors/colors.zsh
 #
-# Recolors the CURRENT iTerm session with SetColors escape codes based on the
+# Recolors the CURRENT iTerm2 session with SetColors escape codes based on the
 # Work_<color> / GitHub_<color> directory name, so CMD +/- zoom, font, and
 # splits survive a directory change (unlike switching profiles).
 #
 # Profile-only settings (badge color, Minimum Contrast, Smart Cursor) cannot be
-# set by escape codes; they are applied to your iTerm Default profile by
+# set by escape codes; they are applied to your iTerm2 Default profile by
 # apply-iterm-profile.py (run once via install.sh).
 
 typeset -gA _ITERM_PAYLOAD

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Apply terminal-colors profile settings to your iTerm2 *Default* profile:
+Apply iterm2_colors profile settings to your iTerm2 *Default* profile:
   - Badge Color -> neutral gray (tints per background instead of a fixed hue)
   - Minimum Contrast -> 0.5 (un-mutes faint/dim text)
   - Smart Cursor Color -> on
