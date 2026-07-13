@@ -1,4 +1,4 @@
-# iterrm2_colors — per-directory iTerm2 recolor (zoom-safe)
+# iterm2_colors — per-directory iTerm2 recolor (zoom-safe)
 # Sourced from ~/.zshrc:  source ~/.iterm2_colors/colors.zsh
 #
 # Recolors the CURRENT iTerm2 session with SetColors escape codes based on the
